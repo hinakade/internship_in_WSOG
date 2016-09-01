@@ -1,0 +1,351 @@
+Last login: Mon Aug 29 15:37:42 on ttys000
+shogo-mac:~ aika$ psql my_sample
+psql (9.5.4)
+Type "help" for help.
+
+   Name    | Owner  | Encoding |   Collate   |    Ctype    | Access privileges 
+-----------+--------+----------+-------------+-------------+-------------------
+ my_sample | myuser | UTF8     | ja_JP.UTF-8 | ja_JP.UTF-8 | 
+ postgres  | aika   | UTF8     | ja_JP.UTF-8 | ja_JP.UTF-8 | 
+ template0 | aika   | UTF8     | ja_JP.UTF-8 | ja_JP.UTF-8 | =c/aika          +
+           |        |          |             |             | aika=CTc/aika
+ template1 | aika   | UTF8     | ja_JP.UTF-8 | ja_JP.UTF-8 | =c/aika          +
+           |        |          |             |             | aika=CTc/aika
+(4 rows)
+
+my_sample=# \dt
+        List of relations
+
+
+        List of relations
+ Schema |  Name   | Type  | Owner 
+--------+---------+-------+-------
+ public | account | table | myuser
+ public | user    | table | mouser
+(2 rows)
+
+
+
+——————————————————————
+
+sample=# CREATE TABLE "user"(
+"user_id" SERIAL PRIMARY KEY,
+"name" VARCHAR(50) NOT NULL,
+"age" SMALLINT DEFAULT 0,
+"gender" BOOLEAN DEFAULT FALSE);
+CREATE TABLE
+my_sample=# \d "user"
+                                   Table "public.user"
+ Column  |         Type          |                       Modifiers                        
+---------+-----------------------+--------------------------------------------------------
+ user_id | integer               | not null default nextval('user_user_id_seq'::regclass)
+ name    | character varying(50) | not null
+ age     | smallint              | default 0
+ gender  | boolean               | default false
+Indexes:
+    "user_pkey" PRIMARY KEY, btree (user_id)
+
+———————
+
+
+
+
+
+
+sample=# CREATE TABLE "user"(
+"user_id" SERIAL PRIMARY KEY,
+"name" VARCHAR(50) NOT NULL,
+"age" SMALLINT DEFAULT 0,
+"gender" BOOLEAN DEFAULT FALSE);
+CREATE TABLE
+my_sample=# \d "user"
+                                   Table "public.user"
+ Column  |         Type          |                       Modifiers                        
+---------+-----------------------+--------------------------------------------------------
+ user_id | integer               | not null default nextval('user_user_id_seq'::regclass)
+ name    | character varying(50) | not null
+ age     | smallint              | default 0
+ gender  | boolean               | default false
+Indexes:
+    "user_pkey" PRIMARY KEY, btree (user_id)
+
+
+my_sample=# CREATE TABLE "account"(
+"account_id" SERIAL PRIMARY KEY,
+"login_id" VARCHAR(16) UNIQUE NOT NULL,
+"password" VARCHAR(16) NOT NULL,
+"user_id" INTEGER NOT NULL
+);
+CREATE TABLE
+                                  ^
+my_sample=# \d "account"
+                                      Table "public.account"
+   Column   |         Type          |                          Modifiers                           
+------------+-----------------------+--------------------------------------------------------------
+ account_id | integer               | not null default nextval('account_account_id_seq'::regclass)
+ login_id   | character varying(16) | not null
+ password   | character varying(16) | not null
+ user_id    | integer               | not null
+Indexes:
+    "account_pkey" PRIMARY KEY, btree (account_id)
+    "account_login_id_key" UNIQUE CONSTRAINT, btree (login_id)
+
+my_sample=# ALTER TABLE account ADD CONSTRAINT "fk_accid" FOREIGN KEY("user_id")
+my_sample-# REFERENCES "user"("user_id");
+ALTER TABLE
+sample=# \d account
+                                      Table "public.account"
+   Column   |         Type          |                          Modifiers                           
+------------+-----------------------+--------------------------------------------------------------
+ account_id | integer               | not null default nextval('account_account_id_seq'::regclass)
+ login_id   | character varying(16) | not null
+ password   | character varying(16) | not null
+ user_id    | integer               | not null
+Indexes:
+    "account_pkey" PRIMARY KEY, btree (account_id)
+    "account_login_id_key" UNIQUE CONSTRAINT, btree (login_id)
+Foreign-key constraints:
+    "fk_accid" FOREIGN KEY (user_id) REFERENCES "user"(user_id)
+
+my_sample=# \d "user"
+                                   Table "public.user"
+ Column  |         Type          |                       Modifiers                        
+---------+-----------------------+--------------------------------------------------------
+ user_id | integer               | not null default nextval('user_user_id_seq'::regclass)
+ name    | character varying(50) | not null
+ age     | smallint              | default 0
+ gender  | boolean               | default false
+Indexes:
+    "user_pkey" PRIMARY KEY, btree (user_id)
+Referenced by:
+    TABLE "account" CONSTRAINT "fk_accid" FOREIGN KEY (user_id) REFERENCES "user"(user_id)
+
+
+my_sample=# INSERT INTO "user" VALUES(
+DEFAULT, 'テスト太郎', '30', '1');
+INSERT 0 1
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       1 | テスト太郎 |  30 | t
+(1 row)
+
+
+
+my_sample=# INSERT INTO "account" VALUES(
+DEFAULT, 'test1', 'test1', '1');
+INSERT 0 1
+my_sample=# SELECT * FROM "account";
+ account_id | login_id | password | user_id 
+------------+----------+----------+---------
+          1 | test1    | test1    |       1
+
+
+my_sample=# UPDATE "user" SET "gender" = REPLACE("テスト太郎", '1', '0');
+ERROR:  column "テスト太郎" does not exist
+LINE 1: UPDATE "user" SET "gender" = REPLACE("テスト太郎", '1', '0')...
+                                             ^
+my_sample=# INSERT INTO "account" VALUES(
+DEFAULT, 'test2', 'test2', '2');
+INSERT 0 1
+my_sample=# INSERT INTO "user" VALUES(
+DEFAULT, 'テスト二郎', '25', '0');
+INSERT 0 1
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       1 | テスト太郎 |  30 | f
+       2 | テスト花子 |  32 | f
+       3 | テスト二郎 |  25 | f
+(3 rows)
+
+my_sample=# INSERT INTO "account" VALUES(
+DEFAULT, 'test3', 'test3', '3');
+INSERT 0 1
+my_sample=# SELECT * FROM "account";
+ account_id | login_id | password | user_id 
+------------+----------+----------+---------
+          1 | test1    | test1    |       1
+          2 | test2    | test2    |       2
+          3 | test3    | test3    |       3
+(3 rows)
+
+my_sample=# INSERT INTO "user" VALUES(
+DEFAULT, 'テスト一郎', '50', '0');
+INSERT 0 1
+my_sample=# INSERT INTO "account" VALUES(
+DEFAULT, 'test4', 'test4', '4');
+INSERT 0 1
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       1 | テスト太郎 |  30 | f
+       2 | テスト花子 |  32 | f
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+(4 rows)
+
+my_sample=# SELECT * FROM "account";
+ account_id | login_id | password | user_id 
+------------+----------+----------+---------
+          1 | test1    | test1    |       1
+          2 | test2    | test2    |       2
+          3 | test3    | test3    |       3
+          4 | test4    | test4    |       4
+(4 rows)
+
+my_sample=# INSERT INTO "user" VALUES
+my_sample-# (DEFAULT, 'センス春子', '20', '1'),
+my_sample-# (DEFAULT, 'センス夏子', '20', '1'),
+my_sample-# (DEFAULT, 'センス秋子', '25', '1'),
+my_sample-# (DEFAULT, 'センス冬子', '33', '1');
+INSERT 0 4
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       1 | テスト太郎 |  30 | f
+       2 | テスト花子 |  32 | f
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+       5 | センス春子 |  20 | t
+       6 | センス夏子 |  20 | t
+       7 | センス秋子 |  25 | t
+       8 | センス冬子 |  33 | t
+(8 rows)
+
+sample=# INSERT INTO "account" VALUES
+sample-# (DEFAULT, 'test5', 'test5', '5'),
+sample-# (DEFAULT, 'test6', 'test6', '6'),
+sample-# (DEFAULT, 'test7', 'test7', '7'),
+sample-# (DEFAULT, 'test8', 'test8', '8');
+INSERT 0 4
+sample=# SELECT * FROM "account";
+ account_id | login_id | password | user_id 
+------------+----------+----------+---------
+          1 | test1    | test1    |       1
+          2 | test2    | test2    |       2
+          3 | test3    | test3    |       3
+          4 | test4    | test4    |       4
+          5 | test5    | test5    |       5
+          6 | test6    | test6    |       6
+          7 | test7    | test7    |       7
+          8 | test8    | test8    |       8
+(8 rows)
+
+my_sample=# UPDATE "user" SET "name"='hoge太郎' WHERE "user_id"=1;
+UPDATE 1
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       2 | テスト花子 |  32 | f
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+       5 | センス春子 |  20 | t
+       6 | センス夏子 |  20 | t
+       7 | センス秋子 |  25 | t
+       8 | センス冬子 |  33 | t
+       1 | hoge太郎   |  30 | f
+(8 rows)
+
+my_sample=# UPDATE "user" SET "gender"='1' WHERE "user_id"=2;
+UPDATE 1
+my_sample=# SELECT * FROM "user";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+       5 | センス春子 |  20 | t
+       6 | センス夏子 |  20 | t
+       7 | センス秋子 |  25 | t
+       8 | センス冬子 |  33 | t
+       1 | hoge太郎   |  30 | f
+       2 | テスト花子 |  32 | t
+(8 rows)
+
+my_sample=# SELECT * FROM "user" ORDER BY 
+my_sample-# "user_id";
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       1 | hoge太郎   |  30 | f
+       2 | テスト花子 |  32 | t
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+       5 | センス春子 |  20 | t
+       6 | センス夏子 |  20 | t
+       7 | センス秋子 |  25 | t
+       8 | センス冬子 |  33 | t
+(8 rows)
+
+my_sample=# SELECT * FROM "account";
+ account_id | login_id | password | user_id 
+------------+----------+----------+---------
+          1 | test1    | test1    |       1
+          2 | test2    | test2    |       2
+          3 | test3    | test3    |       3
+          4 | test4    | test4    |       4
+          5 | test5    | test5    |       5
+          6 | test6    | test6    |       6
+          7 | test7    | test7    |       7
+          8 | test8    | test8    |       8
+(8 rows)
+
+
+my_sample=# SELECT * FROM
+"user","account" 
+WHERE
+"user"."user_id" = "account"."user_id";
+ user_id |    name    | age | gender | account_id | login_id | password | user_id 
+---------+------------+-----+--------+------------+----------+----------+---------
+       1 | hoge太郎   |  30 | f      |          1 | test1    | test1    |       1
+       2 | テスト花子 |  32 | t      |          2 | test2    | test2    |       2
+       3 | テスト二郎 |  25 | f      |          3 | test3    | test3    |       3
+       4 | テスト一郎 |  50 | f      |          4 | test4    | test4    |       4
+       5 | センス春子 |  20 | t      |          5 | test5    | test5    |       5
+       6 | センス夏子 |  20 | t      |          6 | test6    | test6    |       6
+       7 | センス秋子 |  25 | t      |          7 | test7    | test7    |       7
+       8 | センス冬子 |  33 | t      |          8 | test8    | test8    |       8
+(8 rows)
+
+my_sample=# SELECT * FROM "user" WHERE "name" IN ('テスト');
+ user_id | name | age | gender 
+---------+------+-----+--------
+(0 rows)
+
+my_sample=# SELECT * FROM "user" WHERE "name" LIKE 'テスト%';
+ user_id |    name    | age | gender 
+---------+------------+-----+--------
+       3 | テスト二郎 |  25 | f
+       4 | テスト一郎 |  50 | f
+       2 | テスト花子 |  32 | t
+(3 rows)
+
+                      
+my_sample=# SELECT * FROM "user" JOIN "account" ON "user"."user_id" = "account"."user_id";
+ user_id |    name    | age | gender | account_id | login_id | password | user_id 
+---------+------------+-----+--------+------------+----------+----------+---------
+       1 | hoge太郎   |  30 | f      |          1 | test1    | test1    |       1
+       2 | テスト花子 |  32 | t      |          2 | test2    | test2    |       2
+       3 | テスト二郎 |  25 | f      |          3 | test3    | test3    |       3
+       4 | テスト一郎 |  50 | f      |          4 | test4    | test4    |       4
+       5 | センス春子 |  20 | t      |          5 | test5    | test5    |       5
+       6 | センス夏子 |  20 | t      |          6 | test6    | test6    |       6
+       7 | センス秋子 |  25 | t      |          7 | test7    | test7    |       7
+       8 | センス冬子 |  33 | t      |          8 | test8    | test8    |       8
+(8 rows)
+
+
+                        
+HINT:  For example, FROM (SELECT ...) [AS] foo.
+my_sample=# SELECT MAX("age") FROM ("user" JOIN "account" ON "user"."user_id" = "account"."user_id");
+ max 
+-----
+  50
+(1 row)
+
+
+
+sample=# SELECT * FROM ("user" JOIN "account" ON "user"."user_id" = "account"."account_id") WHERE "age" = (SELECT MAX("age") FROM ("user" JOIN "account" ON "user"."user_id" = "account"."account_id") );
+ user_id |    name    | age | gender | account_id | login_id | password | user_id 
+---------+------------+-----+--------+------------+----------+----------+---------
+       4 | テスト一郎 |  50 | f      |          4 | test4    | test4    |       4
+(1 row)
