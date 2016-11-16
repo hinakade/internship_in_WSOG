@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.gutter .line-number {
+  background-size: 0px;
+  transition: background-size 0.5s;
+}
+.gutter .line-number.quickfix {
+  background-image: url(atom://atom-typescript/images/light-bulb.png);
+  background-size: 16.66666667px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border-radius: 0px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #abb2bf;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.comment .markup.link {
+  color: #5c6370;
+}
+.entity.name.type {
+  color: #e5c07b;
+}
+.entity.other.inherited-class {
+  color: #98c379;
+}
+.keyword {
+  color: #c678dd;
+}
+.keyword.control {
+  color: #c678dd;
+}
+.keyword.operator {
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
+}
+.storage {
+  color: #c678dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
+}
+.constant {
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
+}
+.constant.numeric {
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
+}
+.variable {
+  color: #e06c75;
+}
+.variable.interpolation {
+  color: #be5046;
+}
+.variable.parameter {
+  color: #abb2bf;
+}
+.string {
+  color: #98c379;
+}
+.string.regexp {
+  color: #56b6c2;
+}
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
+}
+.string.other.link {
+  color: #e06c75;
+}
+.punctuation.definition.comment {
+  color: #5c6370;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.type {
+  color: #56b6c2;
+}
+.support.function {
+  color: #56b6c2;
+}
+.support.function.any-method {
+  color: #61afef;
+}
+.entity.name.function {
+  color: #61afef;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
+}
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
+}
+.entity.other.attribute-name {
+  color: #d19a66;
+}
+.entity.other.attribute-name.id {
+  color: #61afef;
+}
+.meta.class {
+  color: #e5c07b;
+}
+.meta.class.body {
+  color: #abb2bf;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
+}
+.meta.definition.variable {
+  color: #e06c75;
+}
+.meta.link {
+  color: #d19a66;
+}
+.meta.require {
+  color: #61afef;
+}
+.meta.selector {
+  color: #c678dd;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.meta.tag {
+  color: #abb2bf;
+}
+.underline {
+  text-decoration: underline;
+}
+.none {
+  color: #abb2bf;
+}
+.invalid.deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading {
+  color: #e06c75;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.link {
+  color: #c678dd;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw {
+  color: #98c379;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.go .storage.type.string {
+  color: #c678dd;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java .keyword.operator.instanceof {
+  color: #c678dd;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.js .keyword.operator {
+  color: #56b6c2;
+}
+.source.js .keyword.operator.delete,
+.source.js .keyword.operator.in,
+.source.js .keyword.operator.of,
+.source.js .keyword.operator.instanceof,
+.source.js .keyword.operator.new,
+.source.js .keyword.operator.typeof,
+.source.js .keyword.operator.void {
+  color: #c678dd;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h3 id="-project">評価アプリPROJECT</h3>
+<hr>
+<h1 id="-">■ 基本情報</h1>
+<h2 id="-">開発環境</h2>
+<p>Xcode v8.0〜</p>
+<h2 id="-">開発言語</h2>
+<p>swift v3.0</p>
+<h5 id="-">バージョン確認方法</h5>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>$&nbsp;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift&nbsp;-v</span></span></div></pre>
+<h2 id="cocoapods">CocoaPods</h2>
+<p>v1.0.0〜</p>
+<h5 id="-">バージョン確認方法</h5>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>$&nbsp;pod&nbsp;--version</span></span></div></pre>
+<h2 id="-">対応機種</h2>
+<p>iPad Mini</p>
+<h2 id="-os">対応OS</h2>
+<p>iOS8〜</p>
+<h2 id="-db">アプリ内DB</h2>
+<p>Realm検討中</p>
+<hr>
+<h1 id="-swift-">■ Swiftコーディング規約</h1>
+<h2 id="-">バージョン</h2>
+<p>v1.0.0</p>
+<h2 id="-">目次</h2>
+<ul>
+<li><a href="#&#x306F;&#x3058;&#x3081;&#x306B;">はじめに</a></li>
+<li><a href="#&#x547D;&#x540D;&#x898F;&#x5247;">命名規則</a></li>
+<li><a href="#&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;">ファイルフォーマット</a></li>
+<li><a href="#&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x5236;&#x5FA1;">アクセス制御</a></li>
+<li><a href="#&#x30AF;&#x30E9;&#x30B9;">クラス</a></li>
+<li><a href="#&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;">プロパティ</a></li>
+<li><a href="#&#x5909;&#x6570;">変数</a></li>
+<li><a href="#&#x578B;">型</a></li>
+<li><a href="#&#x5236;&#x5FA1;">制御</a></li>
+<li><a href="#&#x6F14;&#x7B97;&#x5B50;">演算子</a></li>
+<li><a href="#&#x30A8;&#x30E9;&#x30FC;&#x30CF;&#x30F3;&#x30C9;&#x30EA;&#x30F3;&#x30B0;&#x30FB;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30CA;&#x30EB;">エラーハンドリング・オプショナル</a></li>
+<li><a href="#&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;&#x30FC;">クロージャー</a></li>
+</ul>
+<p><a name="&#x306F;&#x3058;&#x3081;&#x306B;"></a></p>
+<h2 id="-">はじめに</h2>
+<p>このコーディング規約は以下を方針として策定しています。</p>
+<ul>
+<li>一貫性</li>
+<li>可読性</li>
+<li>冗長性の排除</li>
+</ul>
+<p><a name="&#x547D;&#x540D;&#x898F;&#x5247;"></a></p>
+<h2 id="-">命名規則</h2>
+<h3 id="-">クラス・構造体・列挙体・プロトコル・ジェネリクスの型パラメータ</h3>
+<p>キャメルケースとし、先頭を大文字とすること。<br>(UpperCamelCase)</p>
+<p><strong>理由</strong></p>
+<p>API Design Guidelinesに従う。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;SomeClass&lt;T&gt;&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>enum&nbsp;SomeEnum&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;SomeStruct&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;typealias&nbsp;Element&nbsp;=&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>protocol&nbsp;SomeProtocol&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;associatedtype&nbsp;Parameter</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;someClass&lt;t&gt;&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>enum&nbsp;someEnum&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;someStruct&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;typealias&nbsp;element&nbsp;=&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>protocol&nbsp;someProtocol&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;associatedtype&nbsp;parameter</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="-enum-case">変数・メソッド・enumのcase</h3>
+<p>キャメルケースとし、先頭は小文字とすること。<br>(lowerCamelCase)</p>
+<p><strong>理由</strong></p>
+<p>API Design Guidelinesに従う。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;SomeStruct&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;someNumberProperty:&nbsp;Int</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;func&nbsp;someMethod()&nbsp;-&gt;&nbsp;String&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>enum&nbsp;SomeEnum&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;red</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;green</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;blue</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;SomeStruct&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;SomeNumberProperty:&nbsp;Int</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;func&nbsp;SomeMethod()&nbsp;-&gt;&nbsp;String&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>enum&nbsp;SomeEnum&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Red</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Green</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;Blue</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="-">クラス名</h3>
+<p>クラス名にプレフィックスは付けない。</p>
+<p><strong>理由</strong></p>
+<p>Swiftでは名前空間が存在するためクラス名は衝突せず、ただ可読性を下げてしまうため。<br>また、Swift3でFoundationAPIsのNSプレフィックスは除去されるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;SomeClass&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;SDTSomeClass&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h2 id="-">頭文字語</h2>
+<p>すべて大文字またはすべて小文字とすること。</p>
+<p><strong>理由</strong></p>
+<p>API Design Guidelinesに従う。</p>
+<p><strong>例</strong></p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;url:&nbsp;NSURL&nbsp;=&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;thumbnailURL:&nbsp;NSURL&nbsp;=&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;id:&nbsp;String&nbsp;=&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;userID:&nbsp;String&nbsp;=&nbsp;...</span></span></div></pre>
+<h3 id="url-date-">urlとdateの命名</h3>
+<p>NSURLの場合○○URLを使い、Stringであれば○○URLStringとする。<br>同様にNSDateの場合○○Dateを使い、Stringであれば○○DateStringとする。</p>
+<p><strong>理由</strong></p>
+<p>混同しやすいため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;thumbnailURL:&nbsp;URL</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;imageURLString:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;lastUpdateDate:&nbsp;Date</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;birthdayString:&nbsp;String</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;thumbnailURL:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;lastUpdateDate:&nbsp;String</span></span></div></pre>
+<h3 id="extension-">extensionのファイル名</h3>
+<p>extensionのみのファイル名は<strong>UIView+○○(機能名).swift</strong>とすること。<br>加えて、extensionは機能単位でグルーピングすること。</p>
+<p><strong>理由</strong></p>
+<p>extensionであることを明確にするため。<br>機能ごとにextensionを作り、可読性をあげるため。</p>
+<p><strong>良い例</strong></p>
+<p>UIView+Border.swift</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;UIView&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;@IBInspectable</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;cornerRadius:&nbsp;CGFloat&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;layer.cornerRadius</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.cornerRadius&nbsp;=&nbsp;newValue</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.masksToBounds&nbsp;=&nbsp;newValue&nbsp;&gt;&nbsp;0</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;@IBInspectable</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;borderWidth:&nbsp;CGFloat&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;layer.borderWidth</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.borderWidth&nbsp;=&nbsp;newValue</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;@IBInspectable</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;borderColor:&nbsp;UIColor?&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;layer.borderColor.map&nbsp;{&nbsp;UIColor(CGColor:&nbsp;$0)&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.borderColor&nbsp;=&nbsp;newValue?.CGColor</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<p>Border.swift</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;UIView&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;@IBInspectable</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;borderColor:&nbsp;UIColor?&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;layer.borderColor.map&nbsp;{&nbsp;UIColor(CGColor:&nbsp;$0)&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer.borderColor&nbsp;=&nbsp;newValue?.CGColor</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;↓↓関係ない</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;hasSubview:&nbsp;Bool&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;!subviews.isEmpty</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="-">その他</h3>
+<p>その他命名に関しては、<a href="https://swift.org/documentation/api-design-guidelines/">API Design Guidelines</a>を参考にすること。<br>以下は<em>Fundamentals</em>からの引用です。</p>
+<blockquote>
+<p>・<strong>利用の観点から、明確さ</strong>が最大の目標である。<br>メソッドやプロパティなどのエンティティは、一度だけ定義され、何度も使われるものである。<br>これらを利用する際、明確かつ簡潔であるようにAPIを設計しなければならない。<br>APIの評価をする際は、定義を読むだけでは不十分である。<br>コンテキスト上で明確であるよう、APIを使っている例も含めて評価しなければならない。</p>
+<p>・<strong>明確さは簡潔さよりも重要である。</strong><br>Swiftのコードは短く書くことができるが、できるだけ少ない文字数で<br>可能な限り最小のコードを実現することが目標ではない。<br>Swiftにおける簡潔さは<br>強力な型システムと自然にボイラープレートコードを減らすことができる性質から生まれた、<br>副次的なものである。</p>
+<p>・すべての宣言に<strong>ドキュメントとしてコメント</strong>を記載すること。<br>ドキュメントを書くことで得られる洞察は設計上に大きな影響をあたえるので、<br>端折らないこと。</p>
+</blockquote>
+<p><a name="&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;"></a></p>
+<h2 id="-">ファイルフォーマット</h2>
+<h3 id="-">ファイル内の順序</h3>
+<p>以下の順に書くこと。<br>extensionを使い、関連メソッドをグルーピングするのは任意とする。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;1.import</span></span></div><div class="line"><span class="text plain null-grammar"><span>import&nbsp;UIKit</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;2.protocol</span></span></div><div class="line"><span class="text plain null-grammar"><span>protocol&nbsp;ViewControllerDelegate&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;3.class・struct・enum</span></span></div><div class="line"><span class="text plain null-grammar"><span>final&nbsp;class&nbsp;ViewController:&nbsp;UIViewController&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;4.typealias</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;5.Inner&nbsp;class,&nbsp;enum&nbsp;&amp;&nbsp;struct</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;6.static&nbsp;member</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;6-1.property</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-1-1.public</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-1-1.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-1-2.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-1-3.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-1-2.internal</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-2-1.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-2-2.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-2-3.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-1-3.private</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-3-1.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-3-2.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;6-1-3-3.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;6-2.method</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-2-1.public</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-2-2.internal</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;6-2-3.private</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;7.instance&nbsp;member</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;7-1.property</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-1-1.public</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-1-1.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-1-2.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-1-3.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-1-4.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-1-2.internal</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-2-1.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-2-2.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-2-3.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-2-4.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-1-3.private</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-3-1.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-3-2.let</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-3-3.var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-1-3-4.computed&nbsp;var</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;7-2.method</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-2-1.public</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-1-1.init</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-1-2.life&nbsp;cycle</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-1-3.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-1-4.others</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-2-2.internal</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-1.init</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-2.life&nbsp;cycle</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-3.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-4.others</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;7-2-3.private</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-1.init</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-2.life&nbsp;cycle</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-3.@~</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;|&nbsp;|&nbsp;7-2-2-4.others</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;8.extension</span></span></div><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;ViewController:&nbsp;UITableViewDelegate&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p><strong>理由</strong></p>
+<p>書く順序を統一することで、参照したい情報へのアクセスを効率的にする。</p>
+<h3 id="-">変数宣言時の修飾子の順序</h3>
+<p>以下の順に書くこと。</p>
+<p>@~<br>↓<br>アクセス制御<br>↓<br>static, class<br>↓<br>dynamic, lazy, weak<br>↓<br>let, var</p>
+<p><strong>理由</strong></p>
+<p>統一のため。</p>
+<h3 id="import-">import文の順序</h3>
+<p>以下の順に書くこと。</p>
+<p>フレームワーク<br>↓<br>ライブラリ</p>
+<p>また、同系列内ではアルファベット順に書くこと。</p>
+<p><strong>理由</strong></p>
+<p>コンフリクトを防止するため。<br>順序を揃えることで可読性を上げるため。</p>
+<h3 id="-">使われていないコードの削除</h3>
+<ul>
+<li>使われていないコード</li>
+<li>スーパークラスを呼び出すだけのコード</li>
+<li>Xcodeのテンプレートとして書かれたままのコード</li>
+</ul>
+<p>は削除する。</p>
+<p><strong>理由</strong></p>
+<p>無用なコードは可読性を下げるため。</p>
+<h3 id="-">スペース</h3>
+<ul>
+<li>ブラケットの前後には半角スペースを1つおくこと。</li>
+<li>メソッドの戻り値の-&gt;の前後に半角スペースを1つおくこと。</li>
+<li>コロンの前はスペースを入れず、コロンの後ろに1つスペースをいれること。(三項演算子を除く)</li>
+<li>カンマの前にはスペースを入れず、カンマの後ろに1つスペースをいれること。</li>
+<li>演算子の実装の際は演算子の後ろに1つスペースをおくこと。</li>
+</ul>
+<p><strong>理由</strong></p>
+<p>一貫性を持たせるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>func&nbsp;something()&nbsp;-&gt;&nbsp;Int&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;some:&nbsp;Int&nbsp;=&nbsp;0</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>func&nbsp;&lt;|&nbsp;(lhs:&nbsp;Int,&nbsp;rhs:&nbsp;Int)&nbsp;-&gt;&nbsp;Int</span></span></div><div class="line"><span class="text plain null-grammar"><span>func&nbsp;&lt;|&lt;&nbsp;&lt;A&gt;(lhs:&nbsp;A,&nbsp;rhs:&nbsp;A)&nbsp;-&gt;&nbsp;A</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>func&nbsp;something()-&gt;Int{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;some&nbsp;:Int&nbsp;=&nbsp;0</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>func&nbsp;&lt;|(lhs:&nbsp;Int&nbsp;,&nbsp;rhs:&nbsp;Int)-&gt;Int</span></span></div><div class="line"><span class="text plain null-grammar"><span>func&nbsp;&lt;|&lt;&lt;A&gt;(lhs:&nbsp;A,rhs:&nbsp;A)-&gt;A</span></span></div></pre>
+<h3 id="-">プロトコルの実装</h3>
+<p>ひとつのextensionで実装するプロトコルは１つとする。<br>また、継承とプロトコルの準拠を同時に行わないこと。</p>
+<p><strong>理由</strong></p>
+<p>関連メソッドをグルーピングすることで可読性を上げるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;ViewController:&nbsp;UIViewController&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;ViewController:&nbsp;UITableViewDataSource&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;ViewController:&nbsp;UITableViewDelegate&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;ViewController:&nbsp;UIViewController,&nbsp;UITableViewDataSource&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>extension&nbsp;ViewController:&nbsp;UITableViewDataSource,&nbsp;UITableViewDelegate&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="enum-">enumの場所</h3>
+<p>広く使われるものであれば独立したファイルに宣言すること。<br>ある構造に特有のものであればその構造内で宣言すること。</p>
+<p><strong>理由</strong></p>
+<p>enumのある場所を統一するため。</p>
+<h3 id="-">関数の宣言</h3>
+<p>エディター上で折り返したら改行すること。<br>また、改行をいれたらすべての引数の前で改行すること。</p>
+<p><strong>理由</strong></p>
+<p>可読性を上げるため。</p>
+<h3 id="-">セミコロンの使用禁止</h3>
+<p>行末のセミコロンの使用を禁止する。</p>
+<p><strong>理由</strong></p>
+<p>必要ないため。</p>
+<h3 id="-">条件文の()の禁止</h3>
+<p>条件文を()で囲わないこと。</p>
+<p><strong>理由</strong></p>
+<p>必要ないため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>if&nbsp;names.isEmpty&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>if&nbsp;(names.isEmpty)&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="todo-fixme-">todo / fixmeの記載</h3>
+<p>未対応の機能には以下を記述すること。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;</span><span class="storage type class todo"><span>TODO</span></span><span>:&nbsp;〜</span></span></div></pre>
+<p>修正が必要な場合は以下を記述すること。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;</span><span class="storage type class fixme"><span>FIXME</span></span><span>:&nbsp;〜</span></span></div></pre>
+<p><strong>理由</strong></p>
+<p>実装漏れを防止するため。</p>
+<p><a name="&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x5236;&#x5FA1;"></a></p>
+<h2 id="-">アクセス制御</h2>
+<h3 id="-">アクセス制御</h3>
+<p>アクセス制御は可能な限りprivateを指定すること。</p>
+<p><strong>理由</strong></p>
+<p>そのクラス内、メソッド内…ということが担保でき、実装変更時の影響範囲を小さくできるため。</p>
+<p><a name="&#x30AF;&#x30E9;&#x30B9;"></a></p>
+<h2 id="-">クラス</h2>
+<h3 id="final-">final宣言</h3>
+<p>継承、オーバーライドをさせたくない場合は明示的にfinalを宣言すること。</p>
+<p><strong>理由</strong></p>
+<p>継承、オーバーライド不可なことを明示的に示すことで設計意図を示せるため。<br>また、副次的にパフォーマンス向上にも繋がるため。</p>
+<p><a name="&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;"></a></p>
+<h2 id="-">プロパティ</h2>
+<h3 id="self-">self.でのアクセス</h3>
+<p>必要な時にのみ使用すること。<br>(引数と同じ名前のプロパティ、クロージャ内等)</p>
+<p><strong>理由</strong></p>
+<p>統一し、また冗長性を排除するため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;Person&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;let&nbsp;name:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;init(name:&nbsp;String)&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name&nbsp;=&nbsp;name</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;func&nbsp;printName()&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(name)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;let&nbsp;callback:&nbsp;()&nbsp;-&gt;&nbsp;String&nbsp;=&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;self.name</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>struct&nbsp;Person&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;let&nbsp;name:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;func&nbsp;printName()&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(self.name)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="get-">getクロージャの省略</h3>
+<p>算出型プロパティにおいて、ゲッターのみ定義する場合はgetのクロージャを省略すること。</p>
+<p><strong>理由</strong></p>
+<p>不要なため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;Person&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;first:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;family:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;full:&nbsp;String&nbsp;=&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;first&nbsp;+&nbsp;family</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>class&nbsp;Person&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;first:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;family:&nbsp;String</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;full:&nbsp;String&nbsp;=&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;first&nbsp;+&nbsp;family</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p><a name="&#x5909;&#x6570;"></a></p>
+<h2 id="-">変数</h2>
+<h3 id="-">定数・変数の宣言</h3>
+<p>var宣言を使用するのは、その値が変わり得る等、明確な理由があるときのみとする。<br>それ以外の場合はlet宣言を使用する。</p>
+<p><strong>理由</strong></p>
+<p>より安全なコードにするため。<br>意図しない値の変更を防ぐため。</p>
+<p>letを使用することでプログラマーが値が変わらないことを確認することができる。<br>逆に、varによって宣言された変数が変更されることを予期できる。</p>
+<p><a name="&#x578B;"></a></p>
+<h2 id="-">型</h2>
+<h3 id="-">型推論</h3>
+<p>最大限利用すること。</p>
+<p><strong>理由</strong></p>
+<p>冗長性を排除し、シンプルなコードにするため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;name&nbsp;=&nbsp;&quot;KentaKudo&quot;</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;name:&nbsp;String&nbsp;=&nbsp;&quot;KentaKudo&quot;</span></span></div></pre>
+<h3 id="-">空配列・空辞書の初期化</h3>
+<p>空配列・空辞書の初期化の際は、型推論を利用した形で書くこと。</p>
+<p><strong>理由</strong></p>
+<p>統一のため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;names&nbsp;=&nbsp;[String]()</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;jsonDic&nbsp;=&nbsp;[String:&nbsp;AnyObject]()</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;names:&nbsp;[String]&nbsp;=&nbsp;[]</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;jsonDic:&nbsp;[String:&nbsp;AnyObject]&nbsp;=&nbsp;[:]</span></span></div></pre>
+<h3 id="-">糖衣構文の使用</h3>
+<p>糖衣構文がある場合はそちらを使用すること。<br>Voidに関しては、可読性を理由に例外を認める。</p>
+<p><strong>理由</strong></p>
+<p>統一のため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;names:&nbsp;[String]</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;jsonDic:&nbsp;[String:&nbsp;AnyObject]</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;title:&nbsp;String?</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;someClosure:&nbsp;()&nbsp;-&gt;&nbsp;()</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>var&nbsp;names:&nbsp;Array&lt;String&gt;</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;jsonDic:&nbsp;Dictionary&lt;String,&nbsp;AnyObject&gt;</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;title:&nbsp;Optional&lt;String&gt;</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;someClosure:&nbsp;Void&nbsp;-&gt;&nbsp;Void</span></span></div></pre>
+<h3 id="objective-c-">Objective-Cクラスの扱い</h3>
+<p>文字列はNSString型でなく、String型を使用すること。<br>また、文字列長判定にはcharacters.countを使用すること。</p>
+<p>NSNumber、NSArray、NSDictionary型も同様に、<br>Swiftネイティブな型を利用すること。</p>
+<p><strong>理由</strong></p>
+<p>swiftの型で統一するため。</p>
+<p><strong>-文字列-</strong></p>
+<p>SwiftのStringとObjCのNSStringは異なるクラスである。　文字列はSwiftのString型を利用すること。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;○</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;text:&nbsp;String?</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;x</span></span></div><div class="line"><span class="text plain null-grammar"><span>var&nbsp;text:&nbsp;NSString?</span></span></div></pre>
+<p>文字列のカウントはcountElements関数を利用する。countElementsは各文字のバイト数をもとに正確にカウントすること。
+NSStringのlengthはUTF-16を2バイトコードとみなしてカウントしている。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;○</span></span></div><div class="line"><span class="text plain null-grammar"><span>countElements(&quot;Swift&nbsp;text&quot;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;x</span></span></div><div class="line"><span class="text plain null-grammar"><span>(&quot;Swift&nbsp;text&quot;&nbsp;as&nbsp;NSString).length</span></span></div></pre>
+<p>文字列のゼロレングスチェックはisEmptyプロパティを利用すること。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>//&nbsp;○</span></span></div><div class="line"><span class="text plain null-grammar"><span>if&nbsp;&quot;Hoge&quot;.isEmpty&nbsp;{&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>//&nbsp;x</span></span></div><div class="line"><span class="text plain null-grammar"><span>if&nbsp;countElements(&quot;Swift&nbsp;text&quot;)&nbsp;==&nbsp;0&nbsp;{&nbsp;}</span></span></div></pre>
+<p>文字列の比較は等価演算子で行うこと。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;flg:&nbsp;Bool&nbsp;=&nbsp;&quot;hoge&quot;&nbsp;==&nbsp;&quot;fuga&quot;</span></span></div></pre>
+<p><strong>-数値-</strong></p>
+<p>整数値型はSwiftの数値型を利用すること。
+iOS SDKのAPIでObjCではNSInteger, NSUInteger型のところはSwiftではInt, UIntに置き換えられている。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>func&nbsp;tableView(tableView:&nbsp;UITableView,&nbsp;numberOfRowsInSection&nbsp;section:&nbsp;Int)&nbsp;-&gt;&nbsp;Int</span></span></div></pre>
+<p>少数値型はSwift少数値型を利用すること。
+ただしObjCのCGFloat型はSwiftのFloat型で利用しない。
+CPUが64ビットか32ビットかでCGFloat型がFloat型か、Double型か挙動がかわるため。
+Float型をCGFloat型と計算する場合や戻り値でCGFloat型として返したい場合はコンバージョンする。</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>func&nbsp;tableView(tableView:&nbsp;UITableView,&nbsp;heightForRowAtIndexPath&nbsp;indexPath:&nbsp;NSIndexPath)&nbsp;-&gt;&nbsp;CGFloat</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;f:&nbsp;Float&nbsp;=&nbsp;1.0</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;c:&nbsp;CGFloat&nbsp;=&nbsp;1.0</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;r&nbsp;=&nbsp;CGFloat(f)&nbsp;+&nbsp;c</span></span></div></pre>
+<p><a name="&#x5236;&#x5FA1;"></a></p>
+<h2 id="-">制御構文</h2>
+<h3 id="-for-loop">条件式for loop</h3>
+<p>使用禁止とする。<br>for in を使うこと。</p>
+<p><strong>理由</strong></p>
+<p>swift3でdeprecatedとなるため。</p>
+<p><strong>備考</strong></p>
+<p>swift3移行後は項目を削除する。</p>
+<h3 id="-return">早期Return</h3>
+<p>guard文を利用し、例外の場合に早めに制御を返すこと。</p>
+<p><strong>理由</strong></p>
+<p>guardにより制御が返ることを明示し、可読性を上げるため。<br>また、ネストを減らすことで書きやすさ読みやすさを上げるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>guard&nbsp;hogehoge&nbsp;else&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;return</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>if&nbsp;hogehoge&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>}&nbsp;else&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;return</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p><a name="&#x6F14;&#x7B97;&#x5B50;"></a></p>
+<h2 id="-">演算子</h2>
+<h3 id="-">インクリメント、デクリメント</h3>
+<p>使用禁止とする。</p>
+<p><strong>理由</strong></p>
+<p>Swift3でdeprecatedとなるため。</p>
+<p><strong>備考</strong></p>
+<p>swift3移行後に項目を削除する。</p>
+<p><a name="&#x30A8;&#x30E9;&#x30FC;&#x30CF;&#x30F3;&#x30C9;&#x30EA;&#x30F3;&#x30B0;&#x30FB;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30CA;&#x30EB;"></a></p>
+<h2 id="-">エラーハンドリング・オプショナル</h2>
+<h3 id="implicitly-unwrapped-">Implicitly Unwrapped 型</h3>
+<p>利用をIBOutletに限定する。</p>
+<p><strong>理由</strong></p>
+<p>nilアクセスの可能性をできるだけ下げるため。</p>
+<h3 id="-">アンラップ処理</h3>
+<p>!(forced unwrap)を使わず、optional chaining, optional binding, nil coalescingを使用すること。<br>また、optional bindingの際には、同じ変数名で変数宣言すること。</p>
+<p><strong>理由</strong></p>
+<p>nilアクセスの可能性をできるだけ下げるため。<br>アンラップ前の変数を使ってしまうバグを防ぐため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift:GoodOptionalChaining.swift"><div class="line"><span class="text plain null-grammar"><span>final&nbsp;class&nbsp;ViewController:&nbsp;UIViewController&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;override&nbsp;func&nbsp;viewDidLoad()&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.viewDidLoad()</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;navigationItem&nbsp;=&nbsp;navigationController?.navigationItem</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<pre class="editor-colors lang-swift:GoodOptionalBinding.swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;response:&nbsp;AnyObject&nbsp;=&nbsp;[:]</span></span></div><div class="line"><span class="text plain null-grammar"><span>if&nbsp;let&nbsp;json&nbsp;=&nbsp;response&nbsp;as?&nbsp;[String:&nbsp;AnyObject]&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<pre class="editor-colors lang-swift:GoodNilCoalescing.swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someNumber:&nbsp;Int?&nbsp;=&nbsp;10</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;otherNumber:&nbsp;Int&nbsp;=&nbsp;someNumber&nbsp;??&nbsp;0</span></span></div></pre>
+<pre class="editor-colors lang-swift:GoodBindingNaming.swift"><div class="line"><span class="text plain null-grammar"><span>if&nbsp;let&nbsp;some&nbsp;=&nbsp;some&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift:BadOptionalChaining.swift"><div class="line"><span class="text plain null-grammar"><span>final&nbsp;class&nbsp;ViewController:&nbsp;UIViewController&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;override&nbsp;func&nbsp;viewDidLoad()&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.viewDidLoad()</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;navigationItem&nbsp;=&nbsp;navigationController!.navigationItem</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<pre class="editor-colors lang-swift:BadOptionalBinding.swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;response:&nbsp;AnyObject&nbsp;=&nbsp;[:]</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;json&nbsp;=&nbsp;response&nbsp;as!&nbsp;[String:&nbsp;AnyObject]</span></span></div></pre>
+<pre class="editor-colors lang-swift:BadNilCoalescing.swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someNumber:&nbsp;Int?&nbsp;=&nbsp;10</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;otherNumber:&nbsp;Int&nbsp;=&nbsp;someNumber!</span></span></div></pre>
+<pre class="editor-colors lang-swift:BadBindingNaming.swift"><div class="line"><span class="text plain null-grammar"><span>if&nbsp;let&nbsp;bindedSome&nbsp;=&nbsp;some&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="-">弱参照</h3>
+<p>弱参照をする際にはunownedではなくweakを使用すること。</p>
+<p><strong>理由</strong></p>
+<p>nilアクセスの可能性をできるだけ下げるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>someFunc&nbsp;{&nbsp;[weak&nbsp;self]&nbsp;in</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>someFunc&nbsp;{&nbsp;[unowned&nbsp;self]&nbsp;in</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<h3 id="try-catch">try~catch</h3>
+<p>catchで例外を処理しない場合はtry!ではなく、try?を使用する。</p>
+<p><strong>理由</strong></p>
+<p>nilアクセスの可能性をできるだけ下げるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someInt&nbsp;=&nbsp;try?&nbsp;someErrorThrowMethod()&nbsp;??&nbsp;0</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someInt&nbsp;=&nbsp;try!&nbsp;someErrorThrowMethod()</span></span></div></pre>
+<p><a name="&#x30AF;&#x30ED;&#x30FC;&#x30B8;&#x30E3;&#x30FC;"></a></p>
+<h2 id="-">クロージャー</h2>
+<h3 id="-">クロージャーの表記</h3>
+<p>一行で記述する場合に限り、引数名を省略すること。<br>メソッドが複数のクロージャを引数にとる場合、trailingクロージャの省略形を使用しないこと。</p>
+<p><strong>理由</strong></p>
+<p>複数行のクロージャ内で引数名を省略した場合に可読性が落ちるため。<br>複数のクロージャを引数にするメソッドの呼び出しでtrailingクロージャの省略形を使うと、外部引数名が省略され、可読性が落ちるため。</p>
+<p><strong>例</strong></p>
+<p>良い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someClosure:&nbsp;String&nbsp;-&gt;&nbsp;Int?&nbsp;=&nbsp;{&nbsp;Int($0)&nbsp;}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someClosure:&nbsp;String&nbsp;-&gt;&nbsp;Int?&nbsp;=&nbsp;{&nbsp;string&nbsp;in</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;intValue&nbsp;=&nbsp;Int(string)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;intValue</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>UIView.animateWithDuration(10.0,</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animations:&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(&quot;animate&quot;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;completion:&nbsp;{&nbsp;_&nbsp;in</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(&quot;completed&quot;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</span></span></div></pre>
+<p>悪い例</p>
+<pre class="editor-colors lang-swift"><div class="line"><span class="text plain null-grammar"><span>let&nbsp;someClosure:&nbsp;String&nbsp;-&gt;&nbsp;Int?&nbsp;=&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;intValue&nbsp;=&nbsp;Int($0)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;intValue</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>UIView.animateWithDuration(10.0,</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animations:&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(&quot;animate&quot;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})&nbsp;{&nbsp;_&nbsp;in</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(&quot;competed&quot;)</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div></pre></body>
+</html>
