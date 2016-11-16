@@ -1,0 +1,52 @@
+//
+//  SelectViewController01.swift
+//  FIM_Mockup
+//
+//  Created by 嘉手苅ひな on 2016/10/21.
+//  Copyright © 2016年 嘉手苅ひな. All rights reserved.
+//
+
+import UIKit
+
+class SelectViewController01: UIViewController {
+  
+//画面遷移　（データを次のページにも使えるようにする。）
+    
+    func segueToSecondViewController() {
+        self.performSegue(withIdentifier: "DetailViewController", sender: nil)
+    }
+    
+    
+    
+    @IBAction func f(_ sender: UIButton) {
+        
+        
+        
+        
+        let parameters = ["hello": "こんにちは", "goodbye": "さようなら"]
+        
+  
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    ////////////////////////////////////////////////////////
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
