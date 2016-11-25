@@ -16,6 +16,7 @@
 		270D2C221DD5A48C006866D0 /* FIMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C211DD5A48C006866D0 /* FIMTests.m */; };
 		270D2C2D1DD5A48C006866D0 /* FIMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C2C1DD5A48C006866D0 /* FIMUITests.m */; };
 		270D2C3C1DD5A522006866D0 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C3B1DD5A522006866D0 /* CheckViewController.m */; };
+		27A4DEE51DE81A3800021DCC /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A4DEE41DE81A3800021DCC /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		270D2C2E1DD5A48C006866D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270D2C3A1DD5A522006866D0 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
 		270D2C3B1DD5A522006866D0 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
+		27A4DEE31DE81A3800021DCC /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		27A4DEE41DE81A3800021DCC /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				270D2C0D1DD5A48C006866D0 /* ViewController.h */,
 				270D2C0E1DD5A48C006866D0 /* ViewController.m */,
 				270D2C101DD5A48C006866D0 /* Main.storyboard */,
+				27A4DEE31DE81A3800021DCC /* TableViewController.h */,
+				27A4DEE41DE81A3800021DCC /* TableViewController.m */,
 				270D2C3A1DD5A522006866D0 /* CheckViewController.h */,
 				270D2C3B1DD5A522006866D0 /* CheckViewController.m */,
 				270D2C131DD5A48C006866D0 /* Assets.xcassets */,
@@ -284,6 +289,7 @@
 				270D2C0F1DD5A48C006866D0 /* ViewController.m in Sources */,
 				270D2C3C1DD5A522006866D0 /* CheckViewController.m in Sources */,
 				270D2C0C1DD5A48C006866D0 /* AppDelegate.m in Sources */,
+				27A4DEE51DE81A3800021DCC /* TableViewController.m in Sources */,
 				270D2C091DD5A48C006866D0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +528,7 @@
 				270D2C331DD5A48C006866D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		270D2C341DD5A48C006866D0 /* Build configuration list for PBXNativeTarget "FIMTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				270D2C361DD5A48C006866D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		270D2C371DD5A48C006866D0 /* Build configuration list for PBXNativeTarget "FIMUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +546,7 @@
 				270D2C391DD5A48C006866D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
