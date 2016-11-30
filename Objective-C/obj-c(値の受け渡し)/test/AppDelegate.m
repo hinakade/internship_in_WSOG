@@ -20,6 +20,11 @@
     
     //02 データ受け渡しグローバルフィールド。空要素（nil）を追加する
     _globalStrings01 = nil;
+    
+    //機能実装 btnに初期血を入れる
+    _BtnAnsNum01 = nil;
+    
+    
     return YES;
 }
 

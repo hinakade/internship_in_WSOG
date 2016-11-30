@@ -14,6 +14,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *globalStrings01;
 
 
+
+///nullボタン定義　機能実装
+@property (weak, nonatomic) IBOutlet UILabel *BtnAns;
+
+
+
+
 //04 データ受け渡しアクションボタン
 - (IBAction)Second:(id)sender;
 

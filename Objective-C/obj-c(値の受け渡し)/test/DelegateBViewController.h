@@ -16,6 +16,13 @@
 
 // ローカルラベル表示用
 @property (weak, nonatomic) IBOutlet UILabel *localLabel01;
+@property (weak, nonatomic) IBOutlet UILabel *TotalResult;
+
+
+
+
+
+
 
 @end
 

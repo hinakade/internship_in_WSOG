@@ -58,6 +58,39 @@
 
 
 
+////
+
+//値の受け渡し機能実装する//////////////////////////
+
+- (IBAction)btn07:(UIButton *)sender {
+    _TotalResult.text = @"7点";
+    
+    // delegateデータを送る準備
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    // appDelegate.globalStrings01 転送
+    appDelegate.BtnAnsNum01 =  self.TotalResult.text;
+    
+    
+}
+
+
+- (IBAction)btn06:(UIButton *)sender {
+    _TotalResult.text = @"6点";
+    
+    // delegateデータを送る準備
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    // appDelegate.globalStrings01 転送
+    appDelegate.BtnAnsNum01 =  self.TotalResult.text;
+    
+}
+
+
+
+
+
+
 
 
 

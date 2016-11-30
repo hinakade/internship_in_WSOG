@@ -16,7 +16,7 @@
 @property (strong, nonatomic)  NSString *globalStrings01;
 
 
-
+@property (strong, nonatomic)  NSString *BtnAnsNum01;
 
 
 @end

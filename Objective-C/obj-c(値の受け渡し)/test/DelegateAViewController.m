@@ -39,23 +39,6 @@
 
 
 
-
-
-
-///////////////////////////
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-///////////////////////////
-
-
 #pragma mark - appDelegateに転送
 - (IBAction)Second:(id)sender {
     
@@ -67,9 +50,31 @@
     
     //ソフトウェアキーボードの非表示
     [self.globalStrings01 resignFirstResponder];
-    
 }
 
 
+
+
+
+
+
+
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    //機能実装　btnの値を受け取る
+    // delegateデータを受ける
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    self.BtnAns.text = appDelegate.BtnAnsNum01;
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
