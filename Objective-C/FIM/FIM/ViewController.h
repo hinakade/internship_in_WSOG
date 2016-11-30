@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+///値受け渡し機能　label
+@property (weak, nonatomic) IBOutlet UILabel *BtnAns;
 
 @end
 

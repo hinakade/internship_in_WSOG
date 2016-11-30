@@ -107,15 +107,15 @@
 		270D2C061DD5A48C006866D0 /* FIM */ = {
 			isa = PBXGroup;
 			children = (
+				270D2C101DD5A48C006866D0 /* Main.storyboard */,
 				270D2C0A1DD5A48C006866D0 /* AppDelegate.h */,
 				270D2C0B1DD5A48C006866D0 /* AppDelegate.m */,
 				270D2C0D1DD5A48C006866D0 /* ViewController.h */,
 				270D2C0E1DD5A48C006866D0 /* ViewController.m */,
-				270D2C101DD5A48C006866D0 /* Main.storyboard */,
-				27A4DEE31DE81A3800021DCC /* TableViewController.h */,
-				27A4DEE41DE81A3800021DCC /* TableViewController.m */,
 				270D2C3A1DD5A522006866D0 /* CheckViewController.h */,
 				270D2C3B1DD5A522006866D0 /* CheckViewController.m */,
+				27A4DEE31DE81A3800021DCC /* TableViewController.h */,
+				27A4DEE41DE81A3800021DCC /* TableViewController.m */,
 				270D2C131DD5A48C006866D0 /* Assets.xcassets */,
 				270D2C151DD5A48C006866D0 /* LaunchScreen.storyboard */,
 				270D2C181DD5A48C006866D0 /* Info.plist */,

@@ -22,9 +22,6 @@
 
 
 
-
-
-
 @synthesize globalStrings01;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,8 +32,6 @@
     }
     return self;
 }
-
-
 
 
 #pragma mark - appDelegateに転送
@@ -51,13 +46,6 @@
     //ソフトウェアキーボードの非表示
     [self.globalStrings01 resignFirstResponder];
 }
-
-
-
-
-
-
-
 
 
 

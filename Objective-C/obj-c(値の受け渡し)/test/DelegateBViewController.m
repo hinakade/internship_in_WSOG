@@ -35,13 +35,6 @@
     return self;
 }
 
-#pragma mark - appDelegateに転送
-// View が表示される直前に呼ばれるメソッド
-// タブ等の切り替え等により、画面に表示されるたびに呼び出されます。
-// タブが切り替わるたびに何度でも呼ばれます。
-/*
- iPhone開発 UIViewController ライフサイクル viewDidLoad viewWillAppear viewDidAppear viewWillDisappear viewDidDisappear ios 逆引き サンプル
- */
 
 
 
@@ -57,10 +50,7 @@
 
 
 
-
-////
-
-//値の受け渡し機能実装する//////////////////////////
+//値の受け渡し機能実装する////
 
 - (IBAction)btn07:(UIButton *)sender {
     _TotalResult.text = @"7点";

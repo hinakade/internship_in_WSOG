@@ -11,6 +11,7 @@
 @interface CheckViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *result;
-  
+@property (weak, nonatomic) IBOutlet UILabel *localLabel01;
+
 
 @end

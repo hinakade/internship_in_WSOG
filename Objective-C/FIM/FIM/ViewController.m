@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -14,11 +15,34 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+//値受け渡し機能
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) { }
+    return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // delegateデータを受ける
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    self.BtnAns.text = appDelegate. BtnAnsNum01;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.BtnAns.text = appDelegate.BtnAnsNum01;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

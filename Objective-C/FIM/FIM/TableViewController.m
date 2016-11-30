@@ -49,13 +49,10 @@
     return cell;
 }
 
-////////////////////////////////////////////////////////
 
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//   
-//    printf("異常が発生しました。");
-//}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 
 @end

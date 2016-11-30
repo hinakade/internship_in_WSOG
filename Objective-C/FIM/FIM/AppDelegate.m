@@ -18,10 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    
-    //02 データ受け渡しグローバルフィールド。空要素（nil）を追加する
-    _globalStrings01 = nil;
+    //値受け渡し機能 btn初期値設定
+    _BtnAnsNum01 = nil;
     
 
     return YES;

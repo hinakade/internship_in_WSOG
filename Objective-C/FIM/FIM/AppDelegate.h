@@ -12,11 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
-
-// 01 プロパティ化して外部から参照できるようにします。
-@property (strong, nonatomic)  NSString *globalStrings01;
-
+@property (strong, nonatomic)  NSString *BtnAnsNum01;
 
 
 @end
