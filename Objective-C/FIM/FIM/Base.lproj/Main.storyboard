@@ -272,7 +272,7 @@
                                 <rect key="frame" x="0.0" y="92" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x5R-YZ-Cdb" id="AfX-Pm-i9J">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -294,7 +294,7 @@
                 <navigationController id="Lrb-y9-6so" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UQn-g0-2ml">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UQn-g0-2ml">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
