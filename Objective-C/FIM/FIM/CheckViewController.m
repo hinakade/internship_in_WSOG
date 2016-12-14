@@ -55,9 +55,6 @@
 
 
 }
-
-
-
 - (IBAction)btn06:(UIButton *)sender {
     printf("6点");
     // delegateデータを送る準備
@@ -72,7 +69,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //jsonで内容取得
+    // データの取得
+    NSBundle *bnd01 = [NSBundle mainBundle];
+    NSString *pth01 = [bnd01 pathForResource:@"q_fim"ofType:@"json"];
+    NSURL *url01 = [NSURL fileURLWithPath:pth01];
+    
+    NSURLRequest *req01 = [NSURLRequest requestWithURL:url01];
+    
+    NSData *dat01 = [NSURLConnection sendSynchronousRequest:req01
+                                          returningResponse:nil error:nil];
+    // JSONオブジェクトの取得
+    NSDictionary *cor01 =(NSDictionary *)
+    [NSJSONSerialization JSONObjectWithData:dat01
+                                    options:NSJSONReadingMutableContainers // 基本的にはこれを選ぶ
+                                      error:nil];
+    _q1.text = cor01[@"fim_q"][0][@"q1_food"];
+    _q3.text = cor01[@"fim_q"][15][@"q4_outerwear"];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

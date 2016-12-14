@@ -440,9 +440,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-Ja-9JG">
-                                <frame key="frameInset" minX="122" minY="175" width="347" height="21"/>
+                                <frame key="frameInset" minX="122" minY="175" width="369" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">食事中誰かがそばについている必要があるか
+                                <string key="text">q1 食事中誰かがそばについている必要があるか
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -451,7 +451,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-fO-6af">
                                 <frame key="frameInset" minX="542" minY="464" width="476" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">見本３ どの程度の介助が必要か
+                                <string key="text">見本３ q4 どの程度の介助が必要か
 A◆帽子に介助者にアイスマッサージをしてもらう
    ◆最後に食器に残った食べ物をスプーンに乗せてもらう B◆食べ物をスプーンに乗せれば口までは自分で運べる
 C◆食べ物をすくう、口に運ぶなど
@@ -468,26 +468,10 @@ D◆全ての介助で行っている。
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-LM-9NZ">
-                                <frame key="frameInset" minX="236" minY="222" width="728" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">見本1 ①見積もりレベルまたは声掛けや準備のみ。介助で動作は自分で行える
-◆配膳後に介助者が介入（他阿部ものを刻む。魚の骨を取る、
-パンにバターを塗る、ソースをかける、蓋を開ける、袋を破る等）すれば一人で食べられる。
-
-◆エプロン、カフ、柄付きスプーンなどを準備してもらい食事摂取はできる
-◆胃などの経管栄養で用具の準備・片付けは介助してもらう
-②身体に触れての介助が必要
-
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-sz-B2B">
                                 <frame key="frameInset" minX="20" minY="432" width="496" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">見本２ ◆通常より３倍以上時間が掛かる
+                                <string key="text">見本２ q3 ◆通常より３倍以上時間が掛かる
 ◆エプロン、カフ、柄付きスプーンなどを使用している （自分で用意できる）
 
 ◆きざみ食、魚の骨を取る、肉を切り分けるなどの配慮が必要
@@ -504,6 +488,22 @@ D◆全ての介助で行っている。
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-LM-9NZ">
+                                <frame key="frameInset" minX="276" minY="222" width="728" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">見本1 q2 ①見積もりレベルまたは声掛けや準備のみ。介助で動作は自分で行える
+◆配膳後に介助者が介入（他阿部ものを刻む。魚の骨を取る、
+パンにバターを塗る、ソースをかける、蓋を開ける、袋を破る等）すれば一人で食べられる。
+
+◆エプロン、カフ、柄付きスプーンなどを準備してもらい食事摂取はできる
+◆胃などの経管栄養で用具の準備・片付けは介助してもらう
+②身体に触れての介助が必要
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -511,6 +511,10 @@ D◆全ての介助で行っている。
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="localLabel01" destination="36n-dF-PZz" id="Jqi-7m-PeS"/>
+                        <outlet property="q1" destination="bDU-Ja-9JG" id="4or-Bo-ovn"/>
+                        <outlet property="q2" destination="UbD-LM-9NZ" id="9ih-1b-fyb"/>
+                        <outlet property="q3" destination="7LJ-sz-B2B" id="I74-q0-VgB"/>
+                        <outlet property="q4" destination="tnl-fO-6af" id="8dp-Th-ym6"/>
                         <outlet property="result" destination="gVQ-ba-gcC" id="C5J-06-9yU"/>
                     </connections>
                 </viewController>
