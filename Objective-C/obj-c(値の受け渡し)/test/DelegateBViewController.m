@@ -76,6 +76,15 @@
     
 }
 
+- (IBAction)Btn05:(UIButton *)sender {
+    _TotalResult.text = @"5点";
+    
+    // delegateデータを送る準備
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    // appDelegate.globalStrings01 転送
+    appDelegate.BtnAnsNum01 =  self.TotalResult.text;
+}
 
 
 

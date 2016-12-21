@@ -113,6 +113,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-9I-JdI">
+                                <frame key="frameInset" minX="32" minY="544" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Btn05"/>
+                                <connections>
+                                    <action selector="Btn05:" destination="WlE-HY-rG0" eventType="touchUpInside" id="bzA-gQ-nFk"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="odE-n7-2ec"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -127,6 +136,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YGw-2L-cD2"/>
+        <segue reference="RKt-Cu-4pN"/>
     </inferredMetricsTieBreakers>
 </document>

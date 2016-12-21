@@ -104,13 +104,13 @@
 		27A10F311DDC21B400D233AE /* test */ = {
 			isa = PBXGroup;
 			children = (
+				27A10F3B1DDC21B400D233AE /* Main.storyboard */,
 				27A10F351DDC21B400D233AE /* AppDelegate.h */,
 				27A10F361DDC21B400D233AE /* AppDelegate.m */,
 				27A10F651DDC226400D233AE /* DelegateAViewController.h */,
 				27A10F661DDC226400D233AE /* DelegateAViewController.m */,
 				27A10F681DDC266300D233AE /* DelegateBViewController.h */,
 				27A10F691DDC266300D233AE /* DelegateBViewController.m */,
-				27A10F3B1DDC21B400D233AE /* Main.storyboard */,
 				27A10F3E1DDC21B400D233AE /* Assets.xcassets */,
 				27A10F401DDC21B400D233AE /* LaunchScreen.storyboard */,
 				27A10F431DDC21B400D233AE /* Info.plist */,
