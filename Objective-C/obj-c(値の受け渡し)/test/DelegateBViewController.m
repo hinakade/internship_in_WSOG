@@ -23,9 +23,6 @@
 
 
 
-
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -85,12 +82,6 @@
     // appDelegate.globalStrings01 転送
     appDelegate.BtnAnsNum01 =  self.TotalResult.text;
 }
-
-
-
-
-
-
 
 
 ///////////////////////////////////////////////

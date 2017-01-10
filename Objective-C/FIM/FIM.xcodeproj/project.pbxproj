@@ -16,6 +16,7 @@
 		270D2C221DD5A48C006866D0 /* FIMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C211DD5A48C006866D0 /* FIMTests.m */; };
 		270D2C2D1DD5A48C006866D0 /* FIMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C2C1DD5A48C006866D0 /* FIMUITests.m */; };
 		270D2C3C1DD5A522006866D0 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270D2C3B1DD5A522006866D0 /* CheckViewController.m */; };
+		27236E711E24C8E600DEEB5A /* CheckViewController_C.m in Sources */ = {isa = PBXBuildFile; fileRef = 27236E701E24C8E600DEEB5A /* CheckViewController_C.m */; };
 		274679031E0134D3003D052E /* q_fim.json in Resources */ = {isa = PBXBuildFile; fileRef = 274679021E0134D3003D052E /* q_fim.json */; };
 		2746790B1E013AED003D052E /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2746790A1E013AED003D052E /* blue.png */; };
 		2746790D1E013B6E003D052E /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 2746790C1E013B6E003D052E /* black.png */; };
@@ -61,6 +62,8 @@
 		270D2C2E1DD5A48C006866D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270D2C3A1DD5A522006866D0 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
 		270D2C3B1DD5A522006866D0 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
+		27236E6F1E24C8E600DEEB5A /* CheckViewController_C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController_C.h; sourceTree = "<group>"; };
+		27236E701E24C8E600DEEB5A /* CheckViewController_C.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController_C.m; sourceTree = "<group>"; };
 		274679021E0134D3003D052E /* q_fim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = q_fim.json; sourceTree = "<group>"; };
 		2746790A1E013AED003D052E /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		2746790C1E013B6E003D052E /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				270D2C3A1DD5A522006866D0 /* CheckViewController.h */,
 				270D2C3B1DD5A522006866D0 /* CheckViewController.m */,
 				27BB22F01E0924E200F61AA1 /* CheckViewController_B.h */,
+				27236E6F1E24C8E600DEEB5A /* CheckViewController_C.h */,
+				27236E701E24C8E600DEEB5A /* CheckViewController_C.m */,
 				27BB22F11E0924E200F61AA1 /* CheckViewController_B.m */,
 				27A4DEE31DE81A3800021DCC /* TableViewController.h */,
 				27A4DEE41DE81A3800021DCC /* TableViewController.m */,
@@ -313,6 +318,7 @@
 			files = (
 				27BB22F21E0924E200F61AA1 /* CheckViewController_B.m in Sources */,
 				270D2C0F1DD5A48C006866D0 /* ViewController.m in Sources */,
+				27236E711E24C8E600DEEB5A /* CheckViewController_C.m in Sources */,
 				270D2C3C1DD5A522006866D0 /* CheckViewController.m in Sources */,
 				270D2C0C1DD5A48C006866D0 /* AppDelegate.m in Sources */,
 				27A4DEE51DE81A3800021DCC /* TableViewController.m in Sources */,

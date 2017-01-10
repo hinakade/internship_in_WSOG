@@ -49,10 +49,6 @@
     return cell;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
 
 @end

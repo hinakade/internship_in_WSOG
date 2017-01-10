@@ -15,25 +15,7 @@
 
 @implementation CheckViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    //jsonデータ取得
-//    NSBundle *bnd01 = [NSBundle mainBundle];
-//    NSString *pth01 = [bnd01 pathForResource:@"q_fim"ofType:@"json"];
-//    NSURL *url01 = [NSURL fileURLWithPath:pth01];
-//    NSURLRequest *req01 = [NSURLRequest requestWithURL:url01];
-//    NSData *dat01 = [NSURLConnection sendSynchronousRequest:req01
-//                                          returningResponse:nil error:nil];
-//    // JSONオブジェクトの取得
-//    NSDictionary *cor01 =(NSDictionary *)
-//    [NSJSONSerialization JSONObjectWithData:dat01
-//                                    options:NSJSONReadingMutableContainers
-//                                      error:nil];
-//    _q1.text = cor01[@"fim_q"][0][@"q1_food"];
-//    _q3.text = cor01[@"fim_q"][15][@"q4_outerwear"];
-}
-
+- (void)viewDidLoad { [super viewDidLoad]; }
 
 //1食事
 - (IBAction)btn07:(UIButton *)sender {
@@ -89,9 +71,6 @@
 }
 
 
-
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -109,7 +88,5 @@
 }
 
 ////////////////////////////////////////////////
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
 @end

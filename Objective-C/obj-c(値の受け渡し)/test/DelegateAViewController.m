@@ -60,6 +60,20 @@
     
 }
 
+
+- (IBAction)a:(UIButton *)sender {
+    int i ;
+    i = 1;
+}
+- (IBAction)i:(UIButton *)sender {
+    int i ;
+    i = 2;
+}
+    
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

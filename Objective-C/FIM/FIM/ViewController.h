@@ -27,5 +27,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *check_ans17;
 @property (weak, nonatomic) IBOutlet UILabel *check_ans18;
 
+//button 名前
+@property (weak, nonatomic) IBOutlet UIButton *btn_01;
+@property (weak, nonatomic) IBOutlet UIButton *btn_02;
+@property (weak, nonatomic) IBOutlet UIButton *btn_03;
+
 @end
 

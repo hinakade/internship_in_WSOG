@@ -35,7 +35,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="１食事"/>
                                 <connections>
-                                    <segue destination="OOC-zX-P3J" kind="show" id="VFi-QJ-PK7"/>
+                                    <action selector="btn_01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jxq-NY-h7S"/>
+                                    <segue destination="OOC-zX-P3J" kind="show" id="02V-1y-jaO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h59-0R-mmd">
@@ -43,7 +44,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="2 整容"/>
                                 <connections>
-                                    <segue destination="OOC-zX-P3J" kind="show" id="Xv0-gN-jqk"/>
+                                    <action selector="btn_02:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9c-uF-KDs"/>
+                                    <segue destination="OOC-zX-P3J" kind="show" id="p3y-Fa-9xv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txx-ks-S95">
@@ -51,7 +53,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="4 更衣（上半身）"/>
                                 <connections>
-                                    <segue destination="OOC-zX-P3J" kind="show" id="9Av-hJ-TDg"/>
+                                    <action selector="btn_04:" destination="BYZ-38-t0r" eventType="touchUpInside" id="glg-oO-oTx"/>
+                                    <segue destination="OOC-zX-P3J" kind="show" id="jAq-AC-vLv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-rA-xEr">
@@ -59,7 +62,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="3 清拭（入浴）"/>
                                 <connections>
-                                    <segue destination="OOC-zX-P3J" kind="show" id="yy5-na-B2O"/>
+                                    <action selector="btn_03:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Rv-PU-mOl"/>
+                                    <segue destination="OOC-zX-P3J" kind="show" id="lRM-qw-Rp6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="運動項目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rej-Qg-MF5">
@@ -81,6 +85,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="5 更衣（下半身）"/>
                                 <connections>
+                                    <action selector="btn_05:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDo-vG-GaB"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="Kbh-yr-6OT"/>
                                 </connections>
                             </button>
@@ -98,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="7 排尿管理"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="XpF-VG-BRi"/>
+                                    <action selector="btn_07:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itd-XG-Uyx"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="yYk-qy-ZMg"/>
                                 </connections>
                             </button>
@@ -107,7 +112,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="8 排便管理"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Uuv-mc-Ohi"/>
+                                    <action selector="btn_08:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bac-5b-2XU"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="aFj-eD-T8o"/>
                                 </connections>
                             </button>
@@ -116,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="9 ベット・椅子・車椅子"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="x3N-OC-oV9"/>
+                                    <action selector="btn_09:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nwE-YP-iwf"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="aJ5-pV-4Bp"/>
                                 </connections>
                             </button>
@@ -125,7 +130,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="10 トイレ"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="DH5-Lc-fRn"/>
+                                    <action selector="btn_10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8x2-dw-UVP"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="qK5-9A-co1"/>
                                 </connections>
                             </button>
@@ -188,8 +193,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="12 歩行・車椅子（"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="dyi-T8-RY0"/>
-                                    <segue destination="9MT-ib-IFN" kind="show" id="QWE-09-JzJ"/>
+                                    <action selector="btn_12:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ar0-sJ-m7F"/>
+                                    <segue destination="hS8-bg-Kgx" kind="show" id="eWJ-MA-Tay"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZi-Hb-zqZ">
@@ -197,7 +202,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="13 階段"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="iIR-ps-f0y"/>
+                                    <action selector="btn_13:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2u-56-2C2"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="58W-8r-Njs"/>
                                 </connections>
                             </button>
@@ -206,7 +211,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="14 理解"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="A9K-jF-w2f"/>
+                                    <action selector="btn_14:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKm-O9-N32"/>
+                                    <segue destination="9MT-ib-IFN" kind="show" id="j1r-Yl-q4l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-eK-oxt">
@@ -214,7 +220,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="15 表出"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Euf-la-hWN"/>
+                                    <action selector="btn_15:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Do5-iM-HbX"/>
+                                    <segue destination="9MT-ib-IFN" kind="show" id="bwm-YR-dVE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m55-I1-2gU">
@@ -222,7 +229,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="16 社会的交流"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="9Uu-qu-pJa"/>
+                                    <action selector="btn_16:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvL-hB-VgO"/>
+                                    <segue destination="9MT-ib-IFN" kind="show" id="B15-Hm-EUI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqV-MJ-Zsq">
@@ -230,7 +238,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="17 問題解決"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="0N0-q6-L9P"/>
+                                    <action selector="btn_17:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFm-zh-etf"/>
+                                    <segue destination="9MT-ib-IFN" kind="show" id="PST-2n-2J0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-QA-n5g">
@@ -238,7 +247,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="18 記憶"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="eAg-WE-wyp"/>
+                                    <action selector="btn_18:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Tc-3d-gmU"/>
+                                    <segue destination="9MT-ib-IFN" kind="show" id="bPZ-64-l6i"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4U-dI-Rz4">
@@ -261,7 +271,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="11　浴槽・シャワー"/>
                                 <connections>
-                                    <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="eWJ-vb-YsD"/>
+                                    <action selector="btn_11:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxI-r7-GQk"/>
                                     <segue destination="OOC-zX-P3J" kind="show" id="IGa-73-gjy"/>
                                 </connections>
                             </button>
@@ -390,6 +400,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="btn_02" destination="h59-0R-mmd" id="Gir-TQ-kwK"/>
                         <outlet property="check_ans01" destination="Kud-WO-GAZ" id="vbY-pr-6lY"/>
                         <outlet property="check_ans02" destination="vUI-9G-cED" id="9yV-R9-Wwa"/>
                         <outlet property="check_ans03" destination="49j-VO-QAl" id="uMC-zI-uW5"/>
@@ -469,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeS-vJ-C68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3797" y="123"/>
+            <point key="canvasLocation" x="4806" y="-449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bO0-oM-HBf">
@@ -487,7 +498,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5b4-ah-8Yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="979"/>
+            <point key="canvasLocation" x="-54" y="913"/>
         </scene>
         <!--Check View Controller-->
         <scene sceneID="WYC-He-wIP">
@@ -738,7 +749,7 @@ D◆全ての介助で行っている。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeJ-TK-avU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="149.32533733133434"/>
+            <point key="canvasLocation" x="1888" y="255"/>
         </scene>
         <!--Check View ControllerB-->
         <scene sceneID="hjz-Xc-4EE">
@@ -811,6 +822,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="1点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="zBs-rf-Nds"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QiV-Gk-UcK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="QdX-BV-aGb">
@@ -823,6 +835,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="2点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="ppv-Jy-tF7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="EpT-J8-KN4"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-lm-zuc">
@@ -835,6 +848,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="3点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="7qO-5y-8cL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="M0q-lh-Ih0"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-ad-koy">
@@ -847,6 +861,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="4点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Te1-AG-dBa"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DtG-CC-7dh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="dcG-xi-ADq">
@@ -860,6 +875,7 @@ D◆全ての介助で行っている。
                                 <connections>
                                     <action selector="btn06:" destination="9MT-ib-IFN" eventType="touchUpInside" id="Cmx-zT-A0d"/>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="KJA-Fn-hpX"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="vPs-e5-dMr"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="S7D-zK-38R">
@@ -873,6 +889,7 @@ D◆全ての介助で行っている。
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="5gb-2v-Ir7"/>
                                     <action selector="btn07:" destination="9MT-ib-IFN" eventType="touchUpInside" id="eP6-Df-C1P"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="N0G-ZH-sBp"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-Gf-yWx">
@@ -885,6 +902,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="5点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="uZV-7S-MH7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qTT-k4-vmh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black02.png" translatesAutoresizingMaskIntoConstraints="NO" id="cIu-Ad-k6i">
@@ -928,7 +946,7 @@ D◆全ての介助で行っている。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcl-ji-Zaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="-635.08245877061472"/>
+            <point key="canvasLocation" x="1774" y="-739"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fxh-HF-huD">
@@ -959,6 +977,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="1点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Die-iX-A9d"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ed5-j9-TCM"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-5X-mqj">
@@ -971,6 +990,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="2点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="AGc-iA-MT8"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MBy-aI-gIh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="oNo-9z-u0h">
@@ -983,6 +1003,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="3点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Rz4-o4-xbw"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uiK-G1-XtU"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-XB-UDU">
@@ -995,6 +1016,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="4点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="M6a-oT-j4u"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="e1M-NT-RDm"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black.png" translatesAutoresizingMaskIntoConstraints="NO" id="krB-yH-sQO">
@@ -1007,6 +1029,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="5点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="TEs-qR-tBP"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Dga-r2-RsJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kJ-l6-NJU">
@@ -1015,6 +1038,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="6点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Lws-ZA-hse"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="poq-xp-Xky"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4F-lf-ASL">
@@ -1023,6 +1047,7 @@ D◆全ての介助で行っている。
                                 <state key="normal" title="7点"/>
                                 <connections>
                                     <action selector="btn06:" destination="OOC-zX-P3J" eventType="touchUpInside" id="Oa7-wG-WY7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ghh-Ho-RuS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="q1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7l-8l-NNv">
@@ -1091,7 +1116,7 @@ D◆全ての介助で行っている。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2S-FV-kG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="-1067"/>
+            <point key="canvasLocation" x="-699" y="-739"/>
         </scene>
     </scenes>
     <resources>
@@ -1102,6 +1127,7 @@ D◆全ての介助で行っている。
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xTY-zi-8pT"/>
-        <segue reference="VFi-QJ-PK7"/>
+        <segue reference="yYk-qy-ZMg"/>
+        <segue reference="j1r-Yl-q4l"/>
     </inferredMetricsTieBreakers>
 </document>
