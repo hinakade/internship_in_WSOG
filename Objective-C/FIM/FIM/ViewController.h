@@ -6,7 +6,10 @@
 //  Copyright © 2016年 SOWG. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    //パラメータ
+    NSString *_arguments;
+}
 ///値受け渡し機能　label
 @property (weak, nonatomic) IBOutlet UILabel *check_ans01;
 @property (weak, nonatomic) IBOutlet UILabel *check_ans02;

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CheckViewController : UIViewController
+@interface CheckViewController : UIViewController {
+    NSString *_arguments;
+}
+@property (nonatomic) NSString *arguments;
 
 @property (weak, nonatomic) IBOutlet UILabel *result;
 @property (weak, nonatomic) IBOutlet UILabel *localLabel01;
@@ -16,6 +19,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *q2;
 @property (weak, nonatomic) IBOutlet UILabel *q3;
 @property (weak, nonatomic) IBOutlet UILabel *q4;
-
-@property NSDictionary *jsonans;
 @end

@@ -8,25 +8,51 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "CheckViewController.h"
+#import "CheckViewController_B.h"
+#import "CheckViewController_C.h"
 
 @interface ViewController () @end
 
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSBundle *bnd01 = [NSBundle mainBundle];
+    NSString *pth01 = [bnd01 pathForResource:@"q_fim"ofType:@"json"];
+    NSURL *url01 = [NSURL fileURLWithPath:pth01];
+    
+    NSURLRequest *req01 = [NSURLRequest requestWithURL:url01];
+    
+    NSData *dat01 = [NSURLConnection sendSynchronousRequest:req01
+                                          returningResponse:nil error:nil];
+    // JSONオブジェクトの取得
+    NSDictionary *cor01 =(NSDictionary *)
+    [NSJSONSerialization JSONObjectWithData:dat01
+                                    options:NSJSONReadingMutableContainers
+     // 基本的にはこれを選ぶ
+                                      error:nil];
+    _arguments = cor01[@"fim_q"][0][@"q1_food"];
+    
+    //memo  --------------------------------------------------
+    //segue の名前　：　secondsegue
+    //参考サイト　：　https://lab.dolice.net/blog/2013/03/31/xcode-objc-ui-storyboard-segue/
+    // --------------------------------------------------------
+}
+
 //値受け渡し確認　変数宣言
     int btni;
     btni = 3;
 
     //値受け渡し機能
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+{   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) { }
     return self;
-    }
+}
 
 - (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+{   [super viewWillAppear:animated];
     
     // delegateデータを受ける
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -55,7 +81,10 @@
     }
 
 // textごとに振り分け [値の受け渡し]
-- (IBAction)btn_01:(UIButton *)sender;{ btni = 1;}
+- (IBAction)btn_01:(UIButton *)sender;{
+    btni = 1;
+    [self performSegueWithIdentifier:@"secondSegue" sender:self];
+}
 - (IBAction)btn_02:(UIButton *)sender { btni = 2;}
 - (IBAction)btn_03:(UIButton *)sender { btni = 3;}
 - (IBAction)btn_04:(UIButton *)sender { btni = 4;}
@@ -74,8 +103,16 @@
 - (IBAction)btn_17:(UIButton *)sender { btni = 17;}
 - (IBAction)btn_18:(UIButton *)sender { btni = 18;}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //2つ目の画面にパラメータを渡して遷移する
+    if ([segue.identifier isEqualToString:@"secondSegue"]) {
+        CheckViewController *secondViewController = segue.destinationViewController;
+        secondViewController.arguments = _arguments;
+    }
+}
+
 //////////////////////////////////////////
-- (void)viewDidLoad { [super viewDidLoad]; }
+
 - (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
 @end
 

@@ -36,7 +36,7 @@
                                 <state key="normal" title="１食事"/>
                                 <connections>
                                     <action selector="btn_01:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jxq-NY-h7S"/>
-                                    <segue destination="OOC-zX-P3J" kind="show" id="02V-1y-jaO"/>
+                                    <segue destination="OOC-zX-P3J" kind="show" identifier="secondSegue" id="02V-1y-jaO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h59-0R-mmd">
@@ -446,7 +446,7 @@
                                 <rect key="frame" x="0.0" y="92" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x5R-YZ-Cdb" id="AfX-Pm-i9J">
-                                    <frame key="frameInset" width="1024" height="44"/>
+                                    <frame key="frameInset" width="1024" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1126,8 +1126,8 @@ D◆全ての介助で行っている。
         <image name="red.gif" width="71" height="71"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xTY-zi-8pT"/>
-        <segue reference="yYk-qy-ZMg"/>
+        <segue reference="dfb-sM-GOA"/>
+        <segue reference="02V-1y-jaO"/>
         <segue reference="j1r-Yl-q4l"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,12 +14,16 @@
 @end
 
 @implementation CheckViewController
+@synthesize arguments = _arguments;
 
-- (void)viewDidLoad { [super viewDidLoad]; }
+- (void)viewDidLoad { [super viewDidLoad];
+
+self.q1.text = _arguments;
+
+}
 
 //1食事
 - (IBAction)btn07:(UIButton *)sender {
-    printf("7点");
     // delegateデータを送る準備
     _localLabel01.text = @"7点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -28,28 +32,24 @@
     
 }
 - (IBAction)btn06:(UIButton *)sender {
-    printf("6点");
     _localLabel01.text = @"6点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
 
 }
 - (IBAction)btn05:(UIButton *)sender {
-    printf("5点");
     _localLabel01.text = @"5点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
 
 }
 - (IBAction)btn04:(UIButton *)sender {
-    printf("4点");
     _localLabel01.text = @"4点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
 
 }
 - (IBAction)btn03:(UIButton *)sender {
-    printf("3点");
     _localLabel01.text = @"3点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
@@ -59,11 +59,8 @@
     _localLabel01.text = @"2点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
-
-    printf("2点");
 }
 - (IBAction)btn01:(UIButton *)sender {
-    printf("1点");
     _localLabel01.text = @"1点";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.BtnAnsNum01 =  self.localLabel01.text;
