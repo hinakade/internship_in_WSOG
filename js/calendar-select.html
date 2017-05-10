@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>js</title>
+    <link rel="stylesheet">
+  </head>
+  <body>
+
+     <!--  calendar display  -->
+       <td width="461" colspan="5" valign="top" style="width:460.7pt;border:none;border-right:solid black 1.0pt;padding:0mm 0mm 0mm 0mm;">
+        <p class="TableParagraph" style="margin-top: 2.7pt; margin-left: 5.25pt;">
+
+           <div id="wrap" style="font-size:9.5pt;font-family:'MS Mincho';">
+            <form action="scheduleForm"  id="cht" method="get">
+              <select  id="calYear" onchange="calendar.chYear(this)"></select>年
+              <select id="calMonth" onChange="calendar.chMonth(this)"></select>月
+            </form>
+
+            <table id="calendar">
+              <thead>
+                <tr id="calTitle"></tr>
+              </thead>
+              <tbody id="calBody">
+              </tbody>
+            </table>
+           </div>
+        </p>
+       </td>
+     </tr>
+
+     <tr>
+      <td width="66" valign="top" style="width:65.9pt;border-top:none;border-left:solid black 1.0pt;border-bottom:none;border-right:solid black 1.0pt;padding:0mm 0mm 0mm 0mm; "></td>
+      <td width="461" colspan="5" valign="top" style="width:460.7pt;border:none;border-right:solid black 1.0pt;padding:0mm 0mm 0mm 0mm;"></td>
+     </tr>
+
+     
+
+    
+
+   
+
+ 
+
+    <style>
+     /* Font Definitions */
+    @font-face
+      {font-family:"MS Mincho";}
+     /* Style Definitions */
+  
+    span.a {
+      font-family:"MS Mincho";
+    }
+    p.Heading1, li.Heading1, div.Heading1
+      {
+      margin-top:0mm;
+      margin-right:-.95pt;
+      margin-bottom:0mm;
+      margin-left:6.5pt;
+      margin-bottom:.0001pt;
+      font-size:9.5pt;
+      font-family:"MS Mincho";
+      }
+
+
+     /*calendar css*/
+      #cht > input {
+            width: 50px;
+            font-family: "Cambria Math";
+            font-size:9.0pt;
+            margin-left: 5pt;
+          }
+          #calendar.table {
+            width: 325px;  
+            margin-bottom: 20px;
+          }
+          #calendar thead tr th {
+            font-size:9.0pt;
+          }
+          #calendar tbody tr td {
+            width: 40px;
+            font-size:9.0pt;
+            font-family: "Cambria Math";
+            text-align: center;
+          }
+    </style>
+
+    <!-- calendaer js -->
+     <script>
+      
+      var calendar = (function() {})
+      calendar = {
+        // 初期化
+        init: function() {
+          this.date = new Date();
+          this.elYear = document.getElementById('calYear');
+          this.elMonth = document.getElementById('calMonth');
+          this.year = this.elYear.value != '' ? this.elYear.value : this.date.getFullYear();
+          this.month = this.elMonth.value != '' ? this.elMonth.value : this.date.getMonth() + 1;
+          this.elYear.value = this.year;
+          this.elMonth.value = this.month;
+          this.dayNames = ['日', '月', '火', '水', '木', '金', '土'];
+          this.selectValues = ['', '○', '◎', '△'];
+          this.yearSelectBox();
+          this.monthSelectBox();
+          this.makeHeadTitle();
+        },
+        // 実行
+        exec: function() {
+          this.init();
+          this.build();
+        },
+
+        // onclickの処理(年)
+        chYear: function(e) {
+         this.year = parseInt(e.value);
+        this.build();
+        },
+
+       // onclickの処理(月)
+        chMonth: function(e) {
+          this.month = parseInt(e.value);
+          this.build();
+        },
+
+        // カレンダー構築
+        build: function() {
+          this.makeBodyRows();
+        },
+
+        yearSelectBox: function(selYear) {
+    
+           var selBoxYear = '';
+           for (var i = this.year-1; this.year+1 >= i; i++){
+              
+              if(i == this.year){
+                selBoxYear +=  '<option value="' +  i + '"selected>' + i + '</option>';
+              }else{
+                selBoxYear +=  '<option value="' +  i + '">' + i + '</option>';
+              }
+            }
+           this.elYear.innerHTML =  selBoxYear;
+        },
+
+        monthSelectBox: function(selMonth){
+
+          var selBoxMonth ='';
+          for (var i = 1; 12 >= i ; i++){
+            if(i == this.month){
+               selBoxMonth +=  '<option value="' +  i + '"selected>' + i + '</option>';
+            }else{
+               selBoxMonth +=  '<option value="' +  i + '">' + i + '</option>';
+            }
+          }
+          this.elMonth.innerHTML = selBoxMonth;
+        },
+
+
+        makeHeadTitle: function() {
+          elCalTitle = document.getElementById('calTitle');
+          var cnt = this.dayNames.length;
+          for (var i = 0; cnt > i; i++) {
+            var th = document.createElement('th');
+            //th.innerHTML = '<th>' + this.dayNames[i] + '</th>';
+            th.innerHTML =  this.dayNames[i];
+            elCalTitle.appendChild(th);
+          }
+           console.log(cnt);
+        },
+
+        makeBodyRows: function() {
+          // その月の末日取得
+          firstDay = new Date(this.year, this.month - 1, 1);
+          lastDay = new Date(this.year, this.month, 0);
+          date = new Date();
+          date.setYear(this.year);
+          date.setMonth(this.month - 1);
+          day = date.getDay();
+          elCalBody = document.getElementById('calBody');
+
+          // 子要素 初期化
+          this.removeCalendar(elCalBody);
+          var cnt = lastDay.getDate();
+          var addBlankCnt = firstDay.getDay();
+          var tr = null;
+          var td = null;
+          var day = 1;
+          var tmp = 0; // rowsカウント
+          var i = 0; // 空白カウント
+          while (cnt > 0) {
+            if (day > cnt){
+              elCalBody.appendChild(tr);
+              break;
+            }
+
+            // 行生成
+            if (tmp === 0) {
+              tr = document.createElement('tr');
+            } else if ((tmp % 7) === 0) {
+              elCalBody.appendChild(tr);
+              tr = document.createElement('tr');
+            }
+
+            // 空白 日を生成
+            if (addBlankCnt > i) {
+              tr.appendChild(this.addTd(0, true));
+            } else {
+              var data = (day++) + this.makeSelectbox(0);
+              tr.appendChild(this.addTd(data));
+            }
+            i++;
+            tmp++;
+          }
+        },
+
+        // カレンダー削除
+        removeCalendar: function(el) {
+          var elCalBodyChildren = el.childNodes;
+          var elCnt = elCalBodyChildren.length - 1;
+          if (elCnt > 0) {
+            for (var i = elCnt; i > 0; i--) {
+              el.removeChild(elCalBodyChildren[i]);
+            }
+          }
+        },
+
+        addTd: function(val, blankBool, selected) {
+          var td = document.createElement('td');
+          td.innerHTML = blankBool ? '&nbsp;' : val;
+          return td;
+        },
+
+        // セレクトボックス生成
+        makeSelectbox: function(selected) {
+          var cnt = this.selectValues.length;
+          if (cnt === 0) {
+            return null;
+          }
+          var selectBox = '<select>';
+          for (var i = 0; cnt > i; i++){
+            selectBox += '<option value="' + i + '">' + this.selectValues[i] + '</option>';
+          }
+          selectBox += '</select>';
+          return selectBox;
+        }
+      };
+
+      calendar.exec();
+    </script>
+  </body>
+</html>
